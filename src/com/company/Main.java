@@ -7,12 +7,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println(" Введите натуральное число: ");
-        int amountOfNumbers = input.nextInt();     //колличество чисел,которые надо распечатать
+        int quantityOfNumbers = input.nextInt();     //колличество чисел,которые надо распечатать
         for (int i = 1; ; i++) {
             if (isAmorphousumberNumber(i)) {
-                while (1 <= amountOfNumbers) {
+                while (1 <= quantityOfNumbers) {
                     System.out.println(i + " ");
-                    amountOfNumbers--;
+                    quantityOfNumbers--;
                     break;
                 }
             }
