@@ -7,19 +7,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println(" Введите натуральное число: ");
-        int quantityOfNumbers = input.nextInt();     //колличество чисел,которые надо распечатать
-        for (int i = 1; ; i++) {
-            if (isAmorphousumberNumber(i)) {
-                while (1 <= quantityOfNumbers) {
-                    System.out.println(i + " ");
-                    quantityOfNumbers--;
-                    break;
-                }
+        int counter = input.nextInt();     //колличество чисел,которые надо распечатать
+        int number = 1;
+        while (1 <= counter) {
+            if (isAmorphousNumber(number)) {
+                System.out.println(number + " ");
+                counter--;
             }
+            number++;
         }
     }
 
-    public static boolean isAmorphousumberNumber(int number) {
+    public static boolean isAmorphousNumber(int number) {
         int numberToPowTwo = (int) Math.pow(number, 2);
         String inputNumber = String.valueOf(number);
         String translateNumberToString = String.valueOf(numberToPowTwo);
